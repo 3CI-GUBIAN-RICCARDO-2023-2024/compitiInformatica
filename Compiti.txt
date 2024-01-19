@@ -1,0 +1,104 @@
+es 1
+
+
+import java.util.Scanner; public class Main {
+
+    public static void main(String[] args) {
+    Scanner inp = new Scanner(System.in);
+    int gen = 31, feb = 28 / 29, mar = 31, apr = 30, mag = 31, giu = 30, lu = 31, ago = 31, set = 30, ott = 31, nov = 30, dic = 31;
+    System.out.println("Inserisci giorno");
+    int gg;
+    int mm;
+    int aa;
+    int gg2;
+    int mm2;
+    gg = inp.nextInt();
+    System.out.println("Inserisci mese");
+    mm = inp.nextInt();
+    System.out.println("Inserisci anno");
+    aa = inp.nextInt();
+    System.out.println("Inserisci un altro giono");
+    gg2=inp.nextInt();
+    System.out.println();
+    mm2=inp.nextInt();
+    if (mm > 12 || mm < 1) {
+        System.out.println("Data sbagliata");
+    } else {
+        int f;
+        if ((aa - 2024) % 4 == 0) {
+            f = 29;
+        } else {
+            f = 28;
+        }
+        if (mm == 1 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 2 && (gg > f || gg < 1)) {
+
+            System.out.println("è sbaglita");
+        } else if (mm == 3 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 4 && (gg > 30 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 5 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 6 && (gg > 30 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 7 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 8 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 9 && (gg > 30 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 10 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 11 && (gg > 30 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else if (mm == 12 && (gg > 31 || gg < 1)) {
+            System.out.println("è sbaglita");
+        } else {
+            System.out.println("è corretta");
+        }
+        if (mm == 1) {
+            System.out.println("sono passati" + gg + "giorni");
+        } else if (mm == 2) {
+            System.out.println("sono passati" + (gg + 31) + "giorni");
+        } else if (mm == 3) {
+            System.out.println("sono passati" + (gg + 31 + f) + "giorni");
+        } else if (mm == 4) {
+            System.out.println("sono passati" + (gg + 31 + f + 31) + "giorni");
+        } else if (mm == 5) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30) + "giorni");
+        } else if (mm == 6) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31) + "giorni");
+        } else if (mm == 7) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 30) + "giorni");
+        } else if (mm == 8) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 31 + 30) + "giorni");
+        } else if (mm == 9) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 31 + 30 + 31) + "giorni");
+        } else if (mm == 10) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 31 + 30 + 31 + 30) + "giorni");
+        } else if (mm == 11) {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31) + "giorni");
+        } else {
+            System.out.println("sono passati" + (gg + 31 + f + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 30) + "giorni");
+        }
+    }
+}
+}
+
+
+
+es 2
+
+public class Fibonacci {
+
+public static void main(String[] args) {
+    int n=0 ;        
+    System.out.println("Il valore di Fibonacci per n=" + n + " è: " + fibonacci(n));
+}
+
+public static int fibonacci(int n) {
+    return (n <= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
+}
